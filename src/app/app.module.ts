@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,MatIconModule
+    MatButtonModule,MatIconModule,MatListModule
   ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],

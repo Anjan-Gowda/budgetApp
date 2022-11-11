@@ -16,5 +16,14 @@ p {
 }
 
 .example-full-width {
-  width: 100%;
+  width: 80%;
+}
+
+.float-center{
+  text-align: center;
+}
+
+.table-css{
+  display: flex;
+  justify-content: center;
 }

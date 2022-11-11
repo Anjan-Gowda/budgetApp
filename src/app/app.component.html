@@ -1,23 +1,43 @@
 <mat-card ngClass="top-card">{{budget}}</mat-card>
+<br>
 <mat-divider></mat-divider>
-
-<form class="example-form">
+<br>
+<form class="table-css" (ngSubmit)="submit()">
 <mat-form-field class="example-full-width" appearance="fill">
-  <mat-label>Favorite food</mat-label>
-  <input matInput placeholder="Ex. Pizza" value="Sushi">
+  <mat-label>Amount</mat-label>
+  <input matInput placeholder="Ex. 1000" type="number" name="amount" [(ngModel)]="amount">
 </mat-form-field>
 <mat-form-field class="example-full-width" appearance="fill">
-<mat-label>Favorite food</mat-label>
-<input matInput placeholder="Ex. Pizza" value="Sushi">
+<mat-label>Description</mat-label>
+<input matInput placeholder="Ex. Budget" name="description" [(ngModel)]="description">
 </mat-form-field>
-<div class="example-button-container">
+<div class="float-center">
 <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
-<mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon> 
+  <span class="material-symbols-outlined">
+    chevron_right
+    </span>
 </button>
 </div>
 </form>
 
 
-
-<table>
-</table>
+<div class="table-css">
+  <div>
+    <h3>
+      Income</h3>
+      <mat-selection-list #income>
+        <mat-list-option *ngFor="let shoe of typesOfShoes">
+          {{shoe}}
+        </mat-list-option>
+      </mat-selection-list>
+      </div>
+  <div>
+<h3>
+  Expenses</h3>
+  <mat-selection-list #expenses>
+    <mat-list-option *ngFor="let shoe of typesOfShoes">
+      {{shoe}}
+    </mat-list-option>
+  </mat-selection-list>
+  </div>
+</div>
